@@ -25,6 +25,10 @@
 - Git;
 - GitHub.
 
+## Ссылка на опубликованный проект
+
+GitHub Pages: https://dark1367.github.io/kr1-html-css-shop/
+
 ## Автор
 
 ФИО: Слезкин Илья Андреевич
