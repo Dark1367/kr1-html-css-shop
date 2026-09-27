@@ -41,6 +41,13 @@
   box-sizing: border-box;
 }
 
+/*
+  Плавная прокрутка при переходе по якорным ссылкам.
+*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -82,6 +89,14 @@ a:hover {
 a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
+}
+
+/*
+  Подсветка раздела, к которому выполнен переход по якорю.
+*/
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
 }
 
 /*
@@ -154,6 +169,26 @@ a:focus-visible {
 
 .site-nav__list a:hover {
   text-decoration: underline;
+}
+
+/*
+  Хлебные крошки на внутренних страницах.
+  Текущая страница оформлена через span, перед ней выводится разделитель.
+*/
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
 }
 
 /*
