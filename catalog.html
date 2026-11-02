@@ -28,6 +28,12 @@
               <a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a>
             </li>
             <li class="site-nav__item">
+              <a class="site-nav__link" href="popular.html">Популярные товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="advantages.html">Преимущества</a>
+            </li>
+            <li class="site-nav__item">
               <a class="site-nav__link" href="product.html">Товар</a>
             </li>
             <li class="site-nav__item">
@@ -35,12 +41,6 @@
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="contacts.html">Контакты</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
@@ -109,66 +109,76 @@
           <div class="products-grid">
             <article class="product-card product-card--hit">
               <span class="product-card__badge product-card__badge--hit">Хит</span>
-              <h3 class="product-card__title">Товар 1</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1000 руб.</p>
+              <img class="product-card__image" src="images/product-1.jpg" alt="Внешний аккумулятор 10 000 мАч" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Внешний аккумулятор 10 000 мАч</h3>
+              <p class="product-card__description">Алюминиевый пауэрбанк с быстрой зарядкой: два полных заряда смартфона.</p>
+              <p class="product-card__price">Цена: 1990 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
 
             <article class="product-card product-card--discount">
               <span class="product-card__badge product-card__badge--discount">Скидка</span>
-              <h3 class="product-card__title">Товар 2</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1500 руб.</p>
+              <img class="product-card__image" src="images/product-2.jpg" alt="Керамическая кружка 350 мл" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Керамическая кружка 350 мл</h3>
+              <p class="product-card__description">Белая глазурованная керамика держит тепло, можно мыть в посудомоечной машине.</p>
+              <p class="product-card__price">Цена: 590 руб. <s class="product-card__old-price">790 руб.</s></p>
+              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+            </article>
+
+            <article class="product-card product-card--promo">
+              <span class="product-card__badge product-card__badge--promo">Акция</span>
+              <img class="product-card__image" src="images/product-3.jpg" alt="Подарочный набор «Уютный вечер»" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Подарочный набор «Уютный вечер»</h3>
+              <p class="product-card__description">Кружка, плед и чай в яркой коробке с лентой — готовый подарок.</p>
+              <p class="product-card__price">Цена: 2490 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
 
             <article class="product-card">
-              <h3 class="product-card__title">Товар 3</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2000 руб.</p>
+              <img class="product-card__image" src="images/product-4.jpg" alt="Холщовый рюкзак" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Холщовый рюкзак</h3>
+              <p class="product-card__description">Плотный хлопковый холст и внешний карман на молнии.</p>
+              <p class="product-card__price">Цена: 3490 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
 
             <article class="product-card">
-              <h3 class="product-card__title">Товар 4</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 2500 руб.</p>
+              <img class="product-card__image" src="images/product-5.jpg" alt="Беспроводные наушники" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Беспроводные наушники</h3>
+              <p class="product-card__description">Bluetooth 5.3, шумоподавление и до 30 часов работы.</p>
+              <p class="product-card__price">Цена: 4990 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
 
             <article class="product-card">
-              <h3 class="product-card__title">Товар 5</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 800 руб.</p>
+              <img class="product-card__image" src="images/product-6.jpg" alt="Умные часы" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Умные часы</h3>
+              <p class="product-card__description">Пульс, шаги и уведомления со смартфона, защита от воды.</p>
+              <p class="product-card__price">Цена: 5990 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
 
             <article class="product-card">
-              <h3 class="product-card__title">Товар 6</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1200 руб.</p>
+              <img class="product-card__image" src="images/product-7.jpg" alt="Настольная лампа с абажуром" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Настольная лампа с абажуром</h3>
+              <p class="product-card__description">Деревянное основание и тканевый абажур дают мягкий тёплый свет.</p>
+              <p class="product-card__price">Цена: 2290 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
 
             <article class="product-card">
-              <h3 class="product-card__title">Товар 7</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 3000 руб.</p>
+              <img class="product-card__image" src="images/product-8.jpg" alt="Портативный SSD 1 ТБ" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Портативный SSD 1 ТБ</h3>
+              <p class="product-card__description">Скорость до 1050 МБ/с, защита от ударов и влаги, разъём USB-C.</p>
+              <p class="product-card__price">Цена: 8990 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
 
             <article class="product-card">
-              <h3 class="product-card__title">Товар 8</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 1750 руб.</p>
-              <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-            </article>
-
-            <article class="product-card">
-              <h3 class="product-card__title">Товар 9</h3>
-              <p class="product-card__description">Краткое описание учебного товара.</p>
-              <p class="product-card__price">Цена: 950 руб.</p>
+              <img class="product-card__image" src="images/product-9.jpg" alt="Термобутылка 500 мл" width="480" height="360" loading="lazy">
+              <h3 class="product-card__title">Термобутылка 500 мл</h3>
+              <p class="product-card__description">Матовая сталь, держит горячее до 12 часов, холодное — до 24 часов.</p>
+              <p class="product-card__price">Цена: 1290 руб.</p>
               <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
             </article>
           </div>

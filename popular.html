@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Популярные товары ShopProject: хиты продаж, товары со скидкой и по акции.">
+    <title>Популярные товары — ShopProject</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Популярные товары — ShopProject">
+    <meta property="og:description" content="Популярные товары ShopProject: хиты продаж, товары со скидкой и по акции.">
+    <meta property="og:image" content="https://dark1367.github.io/kr1-html-css-shop/images/preview.jpg">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
+
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="popular.html">Популярные товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="advantages.html">Преимущества</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">Товар</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Популярные товары</span>
+      </nav>
+
+      <section class="section">
+        <h1>Популярные товары</h1>
+        <p>
+          Товары, которые покупают чаще всего. Подборка обновляется каждую неделю
+          по количеству заказов и оценкам в отзывах.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Хиты, скидки и акции</h2>
+
+        <div class="products-grid">
+          <article class="product-card product-card--hit">
+            <span class="product-card__badge product-card__badge--hit">Хит</span>
+            <img class="product-card__image" src="images/product-1.jpg" alt="Внешний аккумулятор 10 000 мАч" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Внешний аккумулятор 10 000 мАч</h3>
+            <p class="product-card__description">Алюминиевый пауэрбанк с быстрой зарядкой: два полных заряда смартфона.</p>
+            <p class="product-card__price">Цена: 1990 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--discount">
+            <span class="product-card__badge product-card__badge--discount">Скидка</span>
+            <img class="product-card__image" src="images/product-2.jpg" alt="Керамическая кружка 350 мл" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Керамическая кружка 350 мл</h3>
+            <p class="product-card__description">Белая глазурованная керамика держит тепло, можно мыть в посудомоечной машине.</p>
+            <p class="product-card__price">Цена: 590 руб. <s class="product-card__old-price">790 руб.</s></p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--promo">
+            <span class="product-card__badge product-card__badge--promo">Акция</span>
+            <img class="product-card__image" src="images/product-3.jpg" alt="Подарочный набор «Уютный вечер»" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Подарочный набор «Уютный вечер»</h3>
+            <p class="product-card__description">Кружка, плед и чай в яркой коробке с лентой — готовый подарок.</p>
+            <p class="product-card__price">Цена: 2490 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Часто покупают вместе</h2>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <img class="product-card__image" src="images/product-5.jpg" alt="Беспроводные наушники" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Беспроводные наушники</h3>
+            <p class="product-card__description">Bluetooth 5.3, шумоподавление и до 30 часов работы.</p>
+            <p class="product-card__price">Цена: 4990 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/product-6.jpg" alt="Умные часы" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Умные часы</h3>
+            <p class="product-card__description">Пульс, шаги и уведомления со смартфона, защита от воды.</p>
+            <p class="product-card__price">Цена: 5990 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/product-4.jpg" alt="Холщовый рюкзак" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Холщовый рюкзак</h3>
+            <p class="product-card__description">Плотный хлопковый холст и внешний карман на молнии.</p>
+            <p class="product-card__price">Цена: 3490 руб.</p>
+            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
+          </article>
+        </div>
+      </section>
+
+      <aside class="aside-info">
+        <h2 class="aside-info__title">Как формируется подборка</h2>
+        <p>
+          В подборку попадают товары с наибольшим числом заказов за последний месяц
+          и средней оценкой не ниже 4,5 из 5. Товары со скидкой и по акции отмечены бейджами.
+        </p>
+        <div class="aside-info__actions">
+          <a class="button button--primary" href="catalog.html">Весь каталог</a>
+          <a class="button button--secondary" href="order.html">Оставить заявку</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+      <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+    </footer>
+
+    <a class="button button--primary scroll-top" href="#" aria-label="Вернуться в начало страницы">↑ Наверх</a>
+
+  </body>
+</html>
