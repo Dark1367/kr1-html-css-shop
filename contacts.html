@@ -15,18 +15,36 @@
 
   <body>
 
-    <header>
-      <div class="site-header">
-        <a class="site-logo" href="index.html">ShopProject</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
 
         <nav class="site-nav" aria-label="Основная навигация">
           <ul class="site-nav__list">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="index.html#advantages">Преимущества</a></li>
-            <li><a href="index.html#popular">Популярные товары</a></li>
-            <li><a href="index.html#contacts">Обратная связь</a></li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="popular.html">Популярные товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="advantages.html">Преимущества</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">Товар</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -34,8 +52,8 @@
 
     <main>
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
-        <a href="index.html">Главная</a>
-        <span>Контакты</span>
+        <a class="breadcrumbs__link" href="index.html">Главная</a>
+        <span class="breadcrumbs__current">Контакты</span>
       </nav>
 
       <section class="section">
@@ -44,26 +62,104 @@
           Здесь размещается контактная информация учебного интернет-магазина.
         </p>
 
-        <ul>
-          <li>Телефон: +7 (900) 000-00-00</li>
-          <li>E-mail: info@example.com</li>
-          <li>Адрес: г. Москва, учебный проект</li>
+        <ul class="contacts-list">
+          <li class="contacts-list__item">Телефон: +7 (900) 000-00-00</li>
+          <li class="contacts-list__item">E-mail: info@example.com</li>
+          <li class="contacts-list__item">Адрес: г. Москва, учебный проект</li>
         </ul>
       </section>
 
       <section class="section" id="feedback">
-        <h2>Обратная связь</h2>
+        <h2 class="section__title">Обратная связь</h2>
         <p>
-          Для отправки заявки используйте форму в модальном окне на главной странице.
+          Для отправки заявки заполните форму на странице оформления заявки.
         </p>
-        <a class="button" href="index.html#contacts">Перейти к форме</a>
+        <a class="button button--primary" href="order.html">Перейти к форме</a>
+      </section>
+
+      <section class="section faq" id="faq">
+        <h2 class="section__title">Часто задаваемые вопросы</h2>
+
+        <details class="faq__item">
+          <summary class="faq__question">Как оформить заказ?</summary>
+          <div class="faq__answer">
+            <p class="faq__text">
+              Есть два способа. Первый — выбрать товар в каталоге, открыть его страницу кнопкой «Подробнее» и нажать «Оформить заявку». Второй — сразу перейти на страницу заявки и выбрать товар из списка.
+            </p>
+            <p class="faq__text">
+              В форме укажите имя, e-mail и телефон, выберите товар и тему заявки. После отправки менеджер перезвонит, уточнит адрес и удобное время доставки и подтвердит заказ.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Сколько стоит и сколько занимает доставка?</summary>
+          <div class="faq__answer">
+            <p class="faq__text">
+              По Москве в пределах МКАД курьер привезёт заказ за 1–2 дня, стоимость — 300 руб. При заказе от 3000 руб. доставка бесплатная.
+            </p>
+            <p class="faq__text">
+              В Подмосковье и другие регионы отправляем транспортной компанией, срок — от 2 до 7 дней в зависимости от города. Точную стоимость менеджер назовёт при подтверждении заказа. Также можно бесплатно забрать заказ из пункта самовывоза в Москве.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Какие способы оплаты доступны?</summary>
+          <div class="faq__answer">
+            <p class="faq__text">
+              Заказ можно оплатить при получении — наличными или банковской картой курьеру. Курьер выдаёт кассовый чек.
+            </p>
+            <p class="faq__text">
+              Если удобнее оплатить заранее, менеджер после подтверждения пришлёт ссылку на онлайн-оплату картой или через СБП. Предоплата не обязательна: деньги списываются только за подтверждённый заказ.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Можно ли вернуть или обменять товар?</summary>
+          <div class="faq__answer">
+            <p class="faq__text">
+              Да. В течение 14 дней после получения товар можно вернуть без объяснения причин, если сохранены упаковка, комплектность и товарный вид.
+            </p>
+            <p class="faq__text">
+              Чтобы оформить возврат, напишите на e-mail или позвоните по телефону с этой страницы и укажите номер заказа. Курьер заберёт товар, а деньги вернутся тем же способом, которым была сделана оплата, в течение 10 дней.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Что делать, если товар пришёл повреждённым?</summary>
+          <div class="faq__answer">
+            <p class="faq__text">
+              Проверьте упаковку и товар при курьере. Если заметили повреждение, можно сразу отказаться от покупки — оплачивать ничего не нужно.
+            </p>
+            <p class="faq__text">
+              Если дефект обнаружился позже, сфотографируйте его и свяжитесь с нами в течение 14 дней. Мы бесплатно заменим товар или вернём деньги. На все товары, в том числе со скидкой и по акции, действует гарантия 12 месяцев.
+            </p>
+          </div>
+        </details>
+
+        <details class="faq__item">
+          <summary class="faq__question">Как быстро со мной свяжутся после заявки?</summary>
+          <div class="faq__answer">
+            <p class="faq__text">
+              Заявки обрабатываются ежедневно с 9:00 до 21:00. Менеджер перезвонит в течение часа, если заявка отправлена в рабочее время, и утром следующего дня — если вечером или ночью.
+            </p>
+            <p class="faq__text">
+              Если вам неудобно говорить по телефону, напишите об этом в комментарии к заявке — подтвердим заказ по e-mail.
+            </p>
+          </div>
+        </details>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>&copy; 2026 Учебный проект. Все права защищены.</p>
       <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
+
+    <a class="button button--primary scroll-top" href="#" aria-label="Вернуться в начало страницы">↑ Наверх</a>
 
   </body>
 </html>

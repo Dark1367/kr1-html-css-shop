@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Главная страница учебного интернет-магазина: преимущества проекта, популярные товары и форма заявки.">
+    <meta name="description" content="ShopProject — учебный интернет-магазин: популярные товары, преимущества, отзывы покупателей и оформление заявки.">
     <title>Главная — Учебный интернет-магазин</title>
     <meta property="og:type" content="website">
     <meta property="og:title" content="Учебный интернет-магазин">
@@ -16,18 +16,36 @@
 
   <body>
 
-    <header>
-      <div class="site-header">
-        <a class="site-logo" href="index.html">ShopProject</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">ShopProject</a>
 
         <nav class="site-nav" aria-label="Основная навигация">
           <ul class="site-nav__list">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-            <li><a href="index.html#advantages">Преимущества</a></li>
-            <li><a href="index.html#popular">Популярные товары</a></li>
-            <li><a href="index.html#contacts">Обратная связь</a></li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="popular.html">Популярные товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="advantages.html">Преимущества</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="product.html">Товар</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -35,63 +53,128 @@
 
     <main>
       <section class="hero">
-        <h1>Учебный интернет-магазин</h1>
-        <p>
-          Это стартовая страница учебного frontend-проекта.
-          В дальнейшем на её основе будет разработан многостраничный сайт
-          интернет-магазина или каталога услуг.
-        </p>
-        <a class="button" href="#popular">Перейти к товарам</a>
+        <div class="hero__content">
+          <h1 class="hero__title">ShopProject — товары для дома, учёбы и подарков</h1>
+          <p class="hero__text">
+            Гаджеты, аксессуары и подарочные наборы с доставкой по Москве от одного дня.
+            Оформите заявку на сайте — менеджер перезвонит и подтвердит заказ.
+          </p>
+          <a class="button button--primary" href="#popular">Перейти к товарам</a>
+        </div>
+        <img class="hero__image" src="images/hero.jpg" alt="Пакеты с покупками на витрине" width="520" height="360">
       </section>
 
       <section class="section" id="advantages">
-        <h2>Преимущества проекта</h2>
+        <h2 class="section__title">Почему выбирают нас</h2>
 
         <ul class="advantages-list">
-          <li>понятная HTML-структура;</li>
-          <li>семантические блоки страницы;</li>
-          <li>подключение внешнего CSS-файла;</li>
-          <li>подготовка к разработке многостраничного сайта.</li>
+          <li class="advantages-list__item">доставка по Москве от 1 дня;</li>
+          <li class="advantages-list__item">гарантия 12 месяцев на все товары;</li>
+          <li class="advantages-list__item">возврат в течение 14 дней без объяснения причин;</li>
+          <li class="advantages-list__item">оплата при получении наличными или картой.</li>
         </ul>
+
+        <a class="section__link" href="advantages.html">Все преимущества →</a>
       </section>
 
 
       <section class="section" id="popular">
-        <h2>Популярные товары</h2>
+        <h2 class="section__title">Популярные товары</h2>
 
-        <article class="product-card">
-          <h3>Товар 1</h3>
-          <p>Краткое описание учебного товара.</p>
-          <p>Цена: 1000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 1">
-  Заказать
-</button>
+        <div class="products-grid">
+          <article class="product-card product-card--hit">
+            <span class="product-card__badge product-card__badge--hit">Хит</span>
+            <img class="product-card__image" src="images/product-1.jpg" alt="Внешний аккумулятор 10 000 мАч" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Внешний аккумулятор 10 000 мАч</h3>
+            <p class="product-card__description">Алюминиевый пауэрбанк с быстрой зарядкой: два полных заряда смартфона.</p>
+            <p class="product-card__price">Цена: 1990 руб.</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Внешний аккумулятор 10 000 мАч">
+              Заказать
+            </button>
+          </article>
 
-        </article>
+          <article class="product-card product-card--discount">
+            <span class="product-card__badge product-card__badge--discount">Скидка</span>
+            <img class="product-card__image" src="images/product-2.jpg" alt="Керамическая кружка 350 мл" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Керамическая кружка 350 мл</h3>
+            <p class="product-card__description">Белая глазурованная керамика держит тепло, можно мыть в посудомоечной машине.</p>
+            <p class="product-card__price">Цена: 590 руб. <s class="product-card__old-price">790 руб.</s></p>
+            <button class="button button--primary product-card__button" type="button" data-product="Керамическая кружка 350 мл">
+              Заказать
+            </button>
+          </article>
 
-        <article class="product-card">
-          <h3>Товар 2</h3>
-          <p>Краткое описание учебного товара.</p>
-          <p>Цена: 1500 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 2">
-  Заказать
-</button>
+          <article class="product-card product-card--promo">
+            <span class="product-card__badge product-card__badge--promo">Акция</span>
+            <img class="product-card__image" src="images/product-3.jpg" alt="Подарочный набор «Уютный вечер»" width="480" height="360" loading="lazy">
+            <h3 class="product-card__title">Подарочный набор «Уютный вечер»</h3>
+            <p class="product-card__description">Кружка, плед и чай в яркой коробке с лентой — готовый подарок.</p>
+            <p class="product-card__price">Цена: 2490 руб.</p>
+            <button class="button button--primary product-card__button" type="button" data-product="Подарочный набор «Уютный вечер»">
+              Заказать
+            </button>
+          </article>
+        </div>
 
-        </article>
+        <a class="section__link" href="popular.html">Все популярные товары →</a>
+      </section>
 
-        <article class="product-card">
-          <h3>Товар 3</h3>
-          <p>Краткое описание учебного товара.</p>
-          <p>Цена: 2000 руб.</p>
-          <button class="button product-card__button" type="button" data-product="Товар 3">
-  Заказать
-</button>
+      <section class="section reviews" id="reviews">
+        <h2 class="section__title">Отзывы покупателей</h2>
 
-        </article>
+        <div class="reviews__list">
+          <article class="review-card">
+            <h3 class="review-card__author">Анна</h3>
+            <p class="review-card__rating">Оценка: 5 из 5</p>
+            <p class="review-card__text">
+              Заказ оформила за пару минут: выбрала товар в каталоге, нажала «Заказать» и заполнила короткую форму. Менеджер перезвонил в тот же день, уточнил адрес и удобное время. Товар пришёл в целой упаковке, всё совпало с описанием на сайте.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <h3 class="review-card__author">Дмитрий</h3>
+            <p class="review-card__rating">Оценка: 4 из 5</p>
+            <p class="review-card__text">
+              Понравился каталог: всё разложено по полочкам, у каждого товара есть подробные характеристики, поэтому не пришлось звонить с вопросами. Доставка заняла на день больше, чем обещали, но курьер заранее предупредил о задержке.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <h3 class="review-card__author">Мария</h3>
+            <p class="review-card__rating">Оценка: 5 из 5</p>
+            <p class="review-card__text">
+              Купила товар по скидке и осталась очень довольна. Качество не хуже, чем у дорогих аналогов, а цена заметно ниже. Отдельное спасибо за аккуратную упаковку — брала в подарок, и коробку не стыдно было вручить.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <h3 class="review-card__author">Сергей</h3>
+            <p class="review-card__rating">Оценка: 5 из 5</p>
+            <p class="review-card__text">
+              Заказывал уже третий раз, и каждый раз всё проходит без проблем. Удобно, что на странице товара сразу видно наличие и сроки доставки. Однажды понадобилось поменять адрес — оператор сделал это за пару минут.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <h3 class="review-card__author">Елена</h3>
+            <p class="review-card__rating">Оценка: 4 из 5</p>
+            <p class="review-card__text">
+              Сайт простой и понятный, разберётся даже человек, который редко покупает онлайн. В разделе с вопросами нашла ответ про возврат и оплату. Хотелось бы больше фотографий товара с разных сторон, но в целом впечатления хорошие.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <h3 class="review-card__author">Игорь</h3>
+            <p class="review-card__rating">Оценка: 5 из 5</p>
+            <p class="review-card__text">
+              Брал товар по акции и сначала сомневался, нет ли подвоха. Оказалось, всё честно: цена в заказе совпала с ценой на сайте, никаких скрытых доплат. Пришло быстро, работает отлично, буду рекомендовать друзьям.
+            </p>
+          </article>
+        </div>
       </section>
 
       <aside class="aside-info">
-        <h2>Информация для студентов</h2>
+        <h2 class="aside-info__title">Информация для студентов</h2>
         <p>
           На следующих практических занятиях этот проект будет расширяться:
           появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
@@ -100,20 +183,21 @@
       </aside>
     </main>
 
-    <footer id="contacts">
+    <footer class="site-footer" id="contacts">
       <p>&copy; 2026 Учебный проект. Все права защищены.</p>
       <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 
     <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
-  <h2 id="order-dialog-title">Оформление заявки</h2>
+  <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
 
   <form class="order-form" id="order-form" action="#" method="post" novalidate>
     <input id="selected-product" name="selected-product" type="hidden">
 
-    <div class="form-field">
-      <label for="order-name">Имя</label>
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-name">Имя</label>
       <input
+        class="order-form__input"
         id="order-name"
         name="name"
         type="text"
@@ -124,9 +208,10 @@
       >
     </div>
 
-    <div class="form-field">
-      <label for="order-email">E-mail</label>
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-email">E-mail</label>
       <input
+        class="order-form__input"
         id="order-email"
         name="email"
         type="email"
@@ -136,9 +221,10 @@
       >
     </div>
 
-    <div class="form-field">
-      <label for="order-phone">Телефон</label>
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-phone">Телефон</label>
       <input
+        class="order-form__input"
         id="order-phone"
         name="phone"
         type="tel"
@@ -147,21 +233,22 @@
         pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
         required
       >
-      <small>Формат: +7 (900) 000-00-00</small>
+      <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
     </div>
 
-    <div class="form-field">
-      <label for="order-date">Дата связи</label>
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-date">Дата связи</label>
       <input
+        class="order-form__input"
         id="order-date"
         name="date"
         type="date"
       >
     </div>
 
-    <div class="form-field">
-      <label for="order-topic">Тема заявки</label>
-      <select id="order-topic" name="topic" required>
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-topic">Тема заявки</label>
+      <select class="order-form__select" id="order-topic" name="topic" required>
         <option value="">Выберите тему</option>
         <option value="product">Заказ товара</option>
         <option value="consultation">Консультация</option>
@@ -169,9 +256,10 @@
       </select>
     </div>
 
-    <div class="form-field">
-      <label for="order-comment">Комментарий</label>
+    <div class="order-form__field">
+      <label class="order-form__label" for="order-comment">Комментарий</label>
       <textarea
+        class="order-form__textarea"
         id="order-comment"
         name="comment"
         rows="4"
@@ -179,9 +267,10 @@
       ></textarea>
     </div>
 
-    <div class="form-field form-field--checkbox">
-      <label>
+    <div class="order-form__field order-form__field--checkbox">
+      <label class="order-form__label">
         <input
+          class="order-form__checkbox"
           id="order-agreement"
           name="agreement"
           type="checkbox"
@@ -191,9 +280,9 @@
       </label>
     </div>
 
-    <div class="form-actions">
-      <button type="button" id="close-order-dialog">Закрыть</button>
-      <button type="submit">Отправить заявку</button>
+    <div class="order-form__actions">
+      <button class="button button--secondary" type="button" id="close-order-dialog">Закрыть</button>
+      <button class="button button--primary" type="submit">Отправить заявку</button>
     </div>
   </form>
 </dialog>
@@ -201,6 +290,8 @@
 <p class="success-message" id="success-message" hidden>
   Форма успешно отправлена!
 </p>
+
+    <a class="button button--primary scroll-top" href="#" aria-label="Вернуться в начало страницы">↑ Наверх</a>
 
   </body>
 </html>
