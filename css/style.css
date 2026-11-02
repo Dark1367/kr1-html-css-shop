@@ -33,7 +33,11 @@
   /* Размеры */
   --container-width: 1100px;
 
+  /* Высота закреплённой шапки (логотип + меню) */
+  --header-height: 128px;
+
   /* Слои по оси z */
+  --z-header: 50;
   --z-scroll-top: 100;
 }
 
@@ -52,6 +56,8 @@
 */
 html {
   scroll-behavior: smooth;
+  /* Отступ для якорей, чтобы раздел не прятался под закреплённой шапкой */
+  scroll-padding-top: calc(var(--header-height) + var(--space-md));
 }
 
 body {
@@ -144,9 +150,14 @@ a:focus-visible {
 /*
   Блок site-header: фон шапки на всю ширину,
   содержимое ограничено внутренним контейнером.
+  Шапка закреплена у верхнего края окна при прокрутке (position: sticky).
 */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
   background-color: var(--color-surface);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .site-header__inner {
@@ -378,7 +389,8 @@ a:focus-visible {
 .catalog-filters {
   grid-area: filters;
   position: sticky;
-  top: var(--space-md);
+  /* Фильтр прилипает ниже закреплённой шапки */
+  top: calc(var(--header-height) + var(--space-md));
   align-self: start;
   padding: var(--space-md);
   border: 1px solid var(--color-border);
